@@ -1,0 +1,129 @@
+<ion-app>
+  <ion-header >
+    <ion-toolbar>
+      <ion-title><p style="text-align: center">Add items</p></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+ 
+    <ion-button id="open-modal" expand="block">Update</ion-button>
+ 
+    <ion-label position="stacked">
+              <h1 style=" text-align:center">LIGO</h1>
+            </ion-label>
+            <br>
+          <ion-list>
+            <p>Quantity: {{ quantity1 }}</p>
+            <p>Expiration Date: {{ date1 }}</p>
+            <p>Branch: {{ branch1 }}</p>
+ 
+          </ion-list>
+      <br>
+   
+    <ion-label position="stacked">
+      <h1 style=" text-align:center">BEARBRAND</h1>
+     
+    </ion-label>
+    <br>
+<ion-list>
+  <p> Quantity: {{ quantity2 }}</p>
+  <p>Expiration Date: {{ date2 }}</p>
+  <p>Branch: {{ branch2 }}</p>
+ 
+</ion-list>
+   
+<br>
+    <ion-label position="stacked">
+      <h1 style=" text-align:center">PINOY TASTY</h1>
+    </ion-label>
+    <br>
+ 
+    <ion-list>
+      <p>Quantity: {{ quantity3 }}</p>
+      <p>Expiration Date: {{ date3 }}</p>
+      <p>Branch: {{ branch3 }}</p>
+ 
+    </ion-list>
+ 
+   
+ 
+ 
+   
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-title>Add Item</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item>
+            <ion-label position="stacked">
+              <h1 style=" text-align:center">LIGO</h1>
+            </ion-label>
+            <br>
+           
+ 
+            <ion-label position="stacked">Quantity</ion-label>
+            <ion-input type="text" placeholder="Quanty" [(ngModel)]="quantity1"></ion-input>
+ 
+            <ion-label position="stacked">Expiration Date</ion-label>
+            <ion-input type="text" placeholder="Date" [(ngModel)]="date1"></ion-input>
+ 
+            <ion-label position="stacked">Branch</ion-label>
+            <ion-input type="text" placeholder="Branch" [(ngModel)]="branch1"></ion-input>
+ 
+           
+          </ion-item> <br>
+ 
+          <ion-item>
+            <ion-label position="stacked">
+              <h1 style=" text-align:center">BEARBRAND</h1>
+            </ion-label>
+            <br>
+ 
+            <ion-label position="stacked">Quantity</ion-label>
+            <ion-input type="text" placeholder="Quanty" [(ngModel)]="quantity2"></ion-input>
+ 
+            <ion-label position="stacked">Expiration Date</ion-label>
+            <ion-input type="text" placeholder="Date" [(ngModel)]="date2"></ion-input>
+ 
+            <ion-label position="stacked">Branch</ion-label>
+            <ion-input type="text" placeholder="Branch" [(ngModel)]="branch2"></ion-input>
+ 
+           
+          </ion-item>
+          <br>
+ 
+          <ion-item>
+            <ion-label position="stacked">
+              <h1 style=" text-align:center">PINOY TASTY</h1>
+            </ion-label>
+            <br>
+            <ion-label position="stacked">Quantity</ion-label>
+            <ion-input type="text" placeholder="Quanty" [(ngModel)]="quantity3"></ion-input>
+ 
+            <ion-label position="stacked">Expiration Date</ion-label>
+            <ion-input type="text" placeholder="Date" [(ngModel)]="date3"></ion-input>
+ 
+            <ion-label position="stacked">Branch</ion-label>
+            <ion-input type="text" placeholder="Branch" [(ngModel)]="branch3"></ion-input>
+ 
+           
+          </ion-item>
+         
+        </ion-content>
+ 
+       
+ 
+ 
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+</ion-app>
